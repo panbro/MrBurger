@@ -1,0 +1,3 @@
+.fixed-menu{position:fixed;top:90px;right:27px}.fixed-menu__item,.fixed-menu__item_active{position:relative;display:block;width:16px;height:16px;border-radius:50%;margin-bottom:5px;border:1px solid transparent}.fixed-menu__item:hover,.fixed-menu__item_active:hover{border-color:#fff;cursor:pointer}.fixed-menu__item:after,.fixed-menu__item_active:after{content:"";position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);height:6px;width:6px;border-radius:50%;background:#fff}.fixed-menu__item_active{border:1px solid #fff}
+
+/*# sourceMappingURL=fixed-menu.css.map */
