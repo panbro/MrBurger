@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+  min-width: 940px;
+  // flex-direction: column;
+  flex-direction: column;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  background-repeat: no-repeat;
+
+  &_centered {
+    .title {
+      width: 100%;
+      text-align: center;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+  //max-width: 940px;
+  height: 100%;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; 
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+%clearfix {
+  &after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@each $bgpic in (hero, we-are) {
+  //section__hero
+  .section__#{$bgpic} {
+    background: url('../img/backgrounds/section_#{$bgpic}.png') center center / cover no-repeat; //background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@each $wearepic in ( meat,
+hand,
+natural) {
+  .we-are__pic_#{$wearepic} {
+    background-image: url('../img/content/we-are_#{$wearepic}.png');
+    margin-top: 28px;
+    height: 90px;
+    position: relative;
+  }
+}

@@ -1,0 +1,37 @@
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hero__order_btn {
+  margin-left: 15px;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.91;
+}
+
+.hero__image {
+  background-size: 100%;
+  margin-top: -5px; //костыль
+}
+
+.hero__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 14px;
+}
+
+.hero__desc_text {
+  font-family: Lifehack, Helvetica, sans-serif;
+  font-size: 65px;
+  line-height: 0.9;
+  margin-bottom: 63px;
+  color: #fff;
+  margin-top: 9px;
+}

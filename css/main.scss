@@ -1,0 +1,25 @@
+//colors
+$menu_px: 7px;
+$tomato: #e45028;
+$butter: #f9b43b;
+$dark-grey: rgba(47, 50, 52, 0.8);
+
+//normalize.scss
+@import "./layout/normalize.scss";
+
+//setups
+@import "./layout/fonts.scss";
+@import "./layout/base.scss";
+
+//blocks
+@import "./blocks/temporary.scss";
+@import "./blocks/header.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/arrow.scss";
+@import "./blocks/title.scss";
+@import "./blocks/we-are.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/fixed-menu.scss";
+
