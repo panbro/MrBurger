@@ -1,0 +1,29 @@
+.menu__list {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+  &:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #fff;
+    margin: 0 17px;
+  }
+}
+//
+//
