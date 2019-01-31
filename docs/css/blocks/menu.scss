@@ -1,0 +1,87 @@
+.section__menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu__thumb {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  //border: 3px solid blue;
+}
+
+.menu__item {
+  // position: absolute;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //border: 2px solid red;
+  
+
+}
+
+.menu__subtitle {
+  width: 80px;
+  //border: 2px solid green;
+  font-family: Gagalin, Helvetica, sans-serif;
+  font-size: 35px;
+  color: #fff;
+  filter: initial;
+  
+}
+.menu__subtitle-rotate {
+  transform: translate(-38%) rotate(270deg);
+  text-align: center;
+  //border: 2px solid #cac;
+  min-width: 300px;
+  //display: inline-block;
+}
+.menu__desc {
+  width: 555px;
+  height: 100%;
+  //border: 2px solid yellow;
+  width: 0;
+  overflow: hidden;
+
+}
+
+@each $menuitem in (meat, vegan, diet) {
+  .menu__item-#{$menuitem} {
+    background: url('../../img/backgrounds/menu/menu_#{$menuitem}.png') center center / cover no-repeat;
+    //background-color: rgba(31, 30, 30, 0.9);
+    filter: brightness(0.4);
+  }
+}
+
+// .menu__subtitle- {
+//   width: 80px;
+//   font-family: Gagalin, Helvetica, sans-serif;
+//   font-size: 35px;
+//   &meat_ {
+//     // &left {
+//     //   right: 630px;
+//     // }
+//     &right {
+//       right: 0;
+//     }
+//   }
+// }
+
+// .menu__desc {
+//   height: 100%;
+//   width: 555px;
+//   position: absolute;
+//     &-meat {
+//       right: 80px;
+      
+//     }
+// }
