@@ -1,3 +1,6 @@
+.we__container {
+}
+
 .we__title {
 }
 
@@ -5,6 +8,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 39px;
+    &:last-child {
+      margin-right: 0;
+    }
 }
 
 .we__item {
@@ -15,6 +21,7 @@
   align-items: center;
   text-align: center;
   margin: 0 17px;
+ 
 }
 
 .we__pic {
