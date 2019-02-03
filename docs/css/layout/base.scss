@@ -93,7 +93,7 @@ a {
 
 @each $bgpic in (hero, we-are, crew, menu) {
    .section__#{$bgpic} {
-    background: url('../../img/backgrounds/section_#{$bgpic}.png') center center / cover no-repeat; //background-size: cover;
+    background: url('../img/backgrounds/section_#{$bgpic}.png') center center / cover no-repeat; //background-size: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
