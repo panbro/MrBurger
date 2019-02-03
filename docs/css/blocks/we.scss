@@ -1,0 +1,44 @@
+.we__title {
+}
+
+.we__content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 39px;
+}
+
+.we__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 30%;
+  align-items: center;
+  text-align: center;
+  margin: 0 17px;
+}
+
+.we__pic {
+  width: 97px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 28px;
+  height: 90px;
+  position: relative;
+}
+
+.we__subtitle {
+  font-family: Lifehack, Helvetica, sans-serif;
+  line-height: 1.4;
+  font-size: 24px;
+  text-align: inherit;
+  margin-top: 31px;
+}
+
+.we__desc {
+  line-height: 1;
+  color: $dark-grey;
+  text-align: inherit;
+  line-height: 1.71;
+  margin-top: 18px;
+}

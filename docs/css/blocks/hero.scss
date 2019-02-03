@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: space-between;
 }
 
 .hero__order_btn {
@@ -13,11 +14,13 @@
   align-items: center;
   justify-content: center;
   flex: 0.91;
+  margin-bottom: 100px;
 }
 
 .hero__image {
   background-size: 100%;
-  margin-top: -5px; //костыль
+  //margin-bottom: 69px;
+  margin-left: 20px;
 }
 
 .hero__desc {
@@ -25,6 +28,7 @@
   flex-direction: column;
   justify-content: flex-end;
   margin-left: 14px;
+  margin-top: 20px;
 }
 
 .hero__desc_text {

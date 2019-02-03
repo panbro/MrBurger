@@ -30,6 +30,9 @@ body {
   height: 100vh;
   min-height: 650px;
   background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   &_centered {
     .title {
@@ -48,7 +51,6 @@ body {
 .container {
   margin: 0 auto;
   width: 940px;
-  //max-width: 940px;
   height: 100%;
 }
 
@@ -91,22 +93,16 @@ a {
   }
 }
 
-@each $bgpic in (hero, we-are, crew, menu) {
-   .section__#{$bgpic} {
+@each $bgpic in (hero, we, crew, menu) {
+   .#{$bgpic} {
     background: url('../img/backgrounds/section_#{$bgpic}.png') center center / cover no-repeat; //background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
   }
 }
 
-@each $wearepic in ( meat,
+@each $we-pic in ( meat,
 hand,
 natural) {
-  .we-are__pic_#{$wearepic} {
-    background-image: url('../img/content/we-are_#{$wearepic}.png');
-    margin-top: 28px;
-    height: 90px;
-    position: relative;
+  .we__pic_#{$we-pic} {
+    background-image: url('../img/content/we_#{$we-pic}.png');
   }
 }
