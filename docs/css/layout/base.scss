@@ -4,6 +4,33 @@
   box-sizing: border-box;
 }
 
+// //почему миксины не работают из media.scss ?
+// @mixin tablets () {
+//   @media screen and (max-width: $tablets) {
+//     @content;
+//   }
+// }
+
+// //почему миксины не работают из media.scss ?
+// @mixin phones () {
+//   @media screen and (max-width: $phones) {
+//     @content;
+//   }
+// }
+
+
+html {
+  font-size: 16px;
+
+  @include tablets() {
+    font-size: 14px;
+  }
+  
+  @include phones() {
+    font-size: 13px;
+  }
+}
+
 html, body {
   height: 100%;
 }
@@ -21,9 +48,10 @@ body {
   overflow: hidden;
   min-height: 100%;
   width: 100%;
-  min-width: 940px;
-  // flex-direction: column;
+  //min-width: 940px;
+  // flex-direction: column; 
   flex-direction: column;
+  position: relative;
 }
 
 .section {
@@ -50,8 +78,11 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 940px;
+  max-width: 940px;
+  width: 95%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -90,19 +121,11 @@ a {
     content: "";
     display: block;
     clear: both;
-  }
+  } 
 }
 
-@each $bgpic in (hero, we, crew, menu) {
+@each $bgpic in (hero, we, compos, crew, menu, process, order, map) {
    .#{$bgpic} {
-    background: url('../img/backgrounds/section_#{$bgpic}.png') center center / cover no-repeat; //background-size: cover;
-  }
-}
-
-@each $we-pic in ( meat,
-hand,
-natural) {
-  .we__pic_#{$we-pic} {
-    background-image: url('../img/content/we_#{$we-pic}.png');
+    background: url('../img/backgrounds/section_#{$bgpic}.png') center center / cover no-repeat; 
   }
 }

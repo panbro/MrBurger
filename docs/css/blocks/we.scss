@@ -1,35 +1,80 @@
-.we__container {
-}
-
-.we__title {
-}
-
 .we__content {
   display: flex;
   justify-content: center;
-    &:last-child {
-      margin-right: 0;
-    }
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4px;
+  }
+}
+
+.we__title {
+  color: #000;
+  text-align: center;
+  // margin-top: rem(-26px);
+  //margin-left: rem(-11px);
+
+  @include phones {
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
 }
 
 .we__item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 33.3%;
+  max-width: 30%;
   align-items: center;
   text-align: center;
+  margin-right: 2%;
+  &:last-child {
+    margin-right: 0;
+  }
  
+  @include phones {
+    width: initial;
+    flex-direction: row;
+    max-width: 95%;
+    margin-bottom: 20px;
+  }
 }
 
 .we__pic {
-  width: 97px;
   height: 90px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 28px;
-  height: 90px;
+  margin-top: rem(28px);
   position: relative;
+  
+  &_meat {
+    fill: $tomato;
+  }
+  &_hand {
+    fill: $butter;
+  }
+  &_leaf {
+    fill: #8ac03e;
+  }
+
+  @include phones {
+    margin-top: 0;
+  }
+}
+
+svg[class^=we__pic_] {
+  height: 100%;
+
+  @include phones {
+    width: 90px;
+  }
+}
+
+.we__desc {
+  @include phones {
+    text-align: left;
+    margin-left: 27px;
+  }
 }
 
 .we__subtitle {
@@ -37,13 +82,13 @@
   line-height: 1.4;
   font-size: 24px;
   text-align: inherit;
-  margin-top: 31px;
+  margin-top: rem(31px);
 }
 
-.we__desc {
+.we__text {
   line-height: 1;
   color: $dark-grey;
   text-align: inherit;
   line-height: 1.71;
-  margin-top: 18px;
+  margin-top: rem(18px);
 }

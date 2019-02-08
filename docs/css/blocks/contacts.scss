@@ -1,0 +1,39 @@
+.contacts  {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  margin-left: rem(20px);
+  line-height: 1.5;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.contacts__phone {
+  display: inline-flex;
+  align-items: center;
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.contacts__phone-pic {
+  height: rem(12px);
+  width: rem(12px);
+  fill: $tomato;
+  margin-right: rem(10px);
+}
+
+.contacts__adress {
+}
+
+.contacts__tel {
+  font-weight: bold;
+  color: $tomato;
+  font-size: 14px;
+}
+

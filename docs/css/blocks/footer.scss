@@ -1,0 +1,26 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: rem(60px);
+  width: 100%;
+  background: url('../img/backgrounds/bg_footer.png') center center / cover no-repeat;
+  @include phones {
+    height: 116px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  //flex-wrap: nowrap;
+  @include phones {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.footer__col {
+  flex: 1;
+}

@@ -1,87 +1,95 @@
-.section__menu {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.menu__container {
-  display: flex;
-  justify-content: flex-end;
+.menu {
+  position: relative;
   width: 100%;
 }
 
-.menu__thumb {
-  position: relative;
+.menu__accordeon {
   display: flex;
   justify-content: flex-end;
   height: 100%;
-  width: 100%;
-  //border: 3px solid blue;
+}
+
+.menu__title {
+  position: absolute;
+  top: 12%;
+  left: 9%;
+  color: #fff;
+}
+
+.menu__list {
+  display: flex;
+  height: 100%;
 }
 
 .menu__item {
-  // position: absolute;
   display: flex;
-  //justify-content: center;
-  align-items: center;
-  height: 100vh;
-  //border: 2px solid red;
-  
-
+  height: 100%
 }
 
 .menu__subtitle {
-  width: 80px;
-  //border: 2px solid green;
-  font-family: Gagalin, Helvetica, sans-serif;
-  font-size: 35px;
-  color: #fff;
-  filter: initial;
+  display: flex;
+  height: 100%;
+  min-width: 80px;
+  position: relative;
+  cursor: pointer;
   
 }
-.menu__subtitle-rotate {
-  transform: translate(-38%) rotate(270deg);
-  text-align: center;
-  //border: 2px solid #cac;
-  min-width: 300px;
-  //display: inline-block;
+
+.menu__subtitle-text {
+  position: absolute;
+  font-size: 38px;
+  color: #fff;
+  display: block;
+  transform: rotate(-90deg);
+  top: 89%;
+  left: 50%;
+  transform-origin: 0 50%;
+  white-space: nowrap;
 }
+
 .menu__desc {
-  width: 555px;
-  height: 100%;
-  //border: 2px solid yellow;
   width: 0;
   overflow: hidden;
-
+  background-color: rgba(59, 57, 54, 0.93);
+  z-index: 10;
 }
 
-@each $menuitem in (meat, vegan, diet) {
-  .menu__item-#{$menuitem} {
-    background: url('../../img/backgrounds/menu/menu_#{$menuitem}.png') center center / cover no-repeat;
-    //background-color: rgba(31, 30, 30, 0.9);
-    filter: brightness(0.4);
+.js-menu__subtitle .menu__subtitle-text {
+  color: $butter;
+}
+
+.js-menu__subtitle + .menu__desc {
+  width: rem(550px);
+
+  @include tablets {
+    width: 300px;
+  }
+
+  @include phones {
+    width: 150px;
   }
 }
 
-// .menu__subtitle- {
-//   width: 80px;
-//   font-family: Gagalin, Helvetica, sans-serif;
-//   font-size: 35px;
-//   &meat_ {
-//     // &left {
-//     //   right: 630px;
-//     // }
-//     &right {
-//       right: 0;
-//     }
-//   }
-// }
+.menu__text {
+  padding: rem(75px) rem(40px);
+  line-height: 2;
+  color: #fff;
 
-// .menu__desc {
-//   height: 100%;
-//   width: 555px;
-//   position: absolute;
-//     &-meat {
-//       right: 80px;
-      
-//     }
-// }
+  @include phones {
+    padding: 20px 10px;
+    line-height: 1.5;
+  }
+}
+
+@each $menuitem in (meat, vegan, diet) {
+  .menu__subtitle_#{$menuitem} {
+    background: url('../../img/backgrounds/menu/menu_#{$menuitem}.png') center center / cover no-repeat;
+    &:before {
+      content: "";
+      background: #000;
+      width: 100%;
+      opacity: .7;
+    }
+  }
+}
+
