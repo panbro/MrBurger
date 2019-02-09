@@ -14,6 +14,11 @@
   top: 12%;
   left: 9%;
   color: #fff;
+
+  @include phones {
+    top: 5%;
+    left: 13%;
+  }
 }
 
 .menu__list {
@@ -27,12 +32,15 @@
 }
 
 .menu__subtitle {
+  cursor: pointer;
   display: flex;
   height: 100%;
   min-width: 80px;
   position: relative;
-  cursor: pointer;
   
+  @include phones320 {
+    min-width: rem(70px); 
+  }
 }
 
 .menu__subtitle-text {
@@ -45,6 +53,9 @@
   left: 50%;
   transform-origin: 0 50%;
   white-space: nowrap;
+  @include phones320 {
+    font-size: rem(41px);
+  }
 }
 
 .menu__desc {

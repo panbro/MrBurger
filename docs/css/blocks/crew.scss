@@ -14,7 +14,6 @@
   height: 100%;
   width: 50%;
   background-color: rgba(31, 30, 30, 0.9);
-
   @include tablets {
     width: 100%;
     display: flex;
@@ -26,16 +25,15 @@
 
 .crew__content {
   display: flex;
-  flex-direction: column; 
-  align-items: center;
-  //flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center; //flex-wrap: wrap;
   max-width: 60%;
   align-content: center;
-    
   @include tablets {
     text-align: center;
-  }
+    max-width: 45%;
 
+  }
   @include phones {
     max-width: 90%;
   }
@@ -44,7 +42,6 @@
 .crew__title {
   margin-bottom: rem(26px);
   width: 100%;
-
   @include phones {
     font-size: 50px;
     text-align: center;
@@ -59,24 +56,20 @@
   margin-bottom: rem(5px);
   &:before {
     content: "";
-    position: absolute;
-    left: -19px;
-    bottom: -2px;
+    margin-right: rem(10px);
+    display: inline-block;
     border: 5px solid transparent;
     border-top: 5px solid $butter;
   }
-
   @include tablets {
-    //display: inline-flex;
-    font-size: 22px;
+    font-size: rem(28.6px);
   }
-
   @include phones {
-    font-size: 24px;
+    font-size: rem(32px);
   }
 }
 
-.crew__accordeon {
+.crew__acco {
   display: flex;
   flex-direction: column;
   @include tablets {
@@ -91,83 +84,76 @@
     margin-bottom: 0;
   }
 
+  @include tablets {
+    margin-left: 0;
+  }
+
   @include phones {
     margin-bottom: 18px;
   }
+}
 
-  &_active {
-
-    .crew__ {
-
-      &name {
-        color: $butter;
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: rem(5px);
-          border: 5px solid transparent;
-          border-bottom: 5px solid $butter;
-
-        }
-      }
-      &thumb {
-        height: 100%;
-        margin-top: rem(19px);
-        margin-bottom: rem(30px);
-
-        @include tablets {
-        margin-bottom: 12px;
-        margin-top: 10px;
-        }
-      }
-      &desc {
-        @include tablets {
-          margin-top: 18px;
-        }
-      }
-      &post {
-        @include tablets {
-          font-size: 13px;
-        }
-      }
+.crew__item_active {
+  .crew__name {
+    color: $butter;
+    &:before {
+      border: 5px solid transparent;
+      border-bottom: 5px solid $butter;
+      margin-bottom: rem(7px);
+    }
+  }
+  .crew__thumb {
+    height: 100%;
+    margin-top: rem(19px);
+    margin-bottom: rem(30px);
+    @include tablets {
+      margin-bottom: 12px;
+      margin-top: 10px;
     }
   }
 }
 
-
-
 .crew__thumb {
   display: flex;
-  margin-bottom: rem(15px); 
+  margin-bottom: rem(15px);
   height: 0;
   overflow: hidden;
   @include tablets {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
 }
 
 .crew__avatar {
-  //display: inline-block;
   flex-shrink: 0;
   width: 100px;
   height: 100px;
-  background-position: center center;
-  background-size: cover;
+
+}
+
+.crew__avatar-pic{
   border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
 }
 
 .crew__desc {
   color: #fff;
   line-height: 1.7;
   margin-left: rem(21px);
-
+  @include tablets {
+    margin-top: 18px;
+    margin-left: 0;
   }
 }
 
 .crew__post {
   font-weight: bold;
   margin-bottom: rem(8px);
+  @include tablets {
+    font-size: 13px;
+  }
 }
 
 .crew__occupation {

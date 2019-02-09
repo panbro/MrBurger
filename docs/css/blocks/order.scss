@@ -12,7 +12,11 @@
   margin-bottom: rem(26px);
   @include phones {
     line-height: 1.2;
-    font-size: 50px;
+  }
+  @include phones320 {
+    margin-bottom: rem(17px);
+    line-height: 1;
+    font-size: rem(58px);
   }
 }
 
@@ -52,7 +56,10 @@
   align-items: center; // flex: 1;
   margin-bottom: rem(18px);
   @include phones {
-    margin-bottom: 20px;
+    margin-bottom: rem(24px);
+  }
+  @include phones320 {
+    margin-bottom: rem(12px);
   }
 }
 
@@ -96,6 +103,9 @@
 .form__input_textarea {
   resize: vertical;
   padding: rem(5px) rem(20px);
+  @include phones320 {
+    max-height: rem(85px);
+  }
 }
 
 .form__buttons {
@@ -105,8 +115,11 @@
   flex-direction: column;
 
   @include phones {
-    margin-top: 37px;
+    margin-top: rem(45px);
     align-items: center;
+  }
+  @include phones320 {
+    margin-top: rem(25px);
   }
 }
 
@@ -118,7 +131,10 @@
   display: flex;
   margin-bottom: rem(23px);
   @include phones {
-    margin-bottom: 40px;
+    margin-bottom: rem(49px);
+  }
+  @include phones320 {
+    margin-bottom: rem(25px);
   }
   &:last-child {
     margin-bottom: 0;
@@ -141,8 +157,8 @@
 }
 
 .form-controls__fake-radio {
-  width: rem(16px);
-  height: rem(16px);
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 1px solid #ccc;
   background-image: linear-gradient(to top, #ccc, #fff);
@@ -151,8 +167,8 @@
 }
 
 .form-controls__real-radio:checked~.form-controls__fake-radio:after {
-  width: rem(6px);
-  height: rem(6px);
+  width: 6px;
+  height: 6px;
 }
 
 .form-controls__real-radio:checked~.form-controls__fake-radio {
@@ -182,8 +198,8 @@
 
 .form__checkbox-sprite {
   display: inline-block;
-  width: rem(15px);
-  height: rem(15px);
+  width: 15px;
+  height: 15px;
   margin-right: rem(8px);
   vertical-align: middle;
   background: url('../../img/icons/checkbox_sprites.png') -45px -10px;

@@ -4,21 +4,6 @@
   box-sizing: border-box;
 }
 
-// //почему миксины не работают из media.scss ?
-// @mixin tablets () {
-//   @media screen and (max-width: $tablets) {
-//     @content;
-//   }
-// }
-
-// //почему миксины не работают из media.scss ?
-// @mixin phones () {
-//   @media screen and (max-width: $phones) {
-//     @content;
-//   }
-// }
-
-
 html {
   font-size: 16px;
 
@@ -28,6 +13,9 @@ html {
   
   @include phones() {
     font-size: 13px;
+  }
+  @include phones320() {
+    font-size: 12px;
   }
 }
 
@@ -48,15 +36,12 @@ body {
   overflow: hidden;
   min-height: 100%;
   width: 100%;
-  //min-width: 940px;
-  // flex-direction: column; 
   flex-direction: column;
   position: relative;
 }
 
 .section {
   height: 100vh;
-  min-height: 650px;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;

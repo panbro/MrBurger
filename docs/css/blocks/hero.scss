@@ -5,49 +5,34 @@
   justify-content: space-between;
 }
 
-.hero__title {
-  line-height: 1;
-}
 
-.hero__order_btn {
-  margin-left: rem(15px);
-}
 
 .hero__content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 0.91;
-
   @include tablets {
     flex-direction: column;
     align-items: center;
-    .hero__image {
-      width: 58%;
-
-      @include phones {
-        width: 87%;
-      }
-    }
-     .hero__desc {
-       text-align: center;
-       max-width: 70%;
-       margin-top: rem(20px);
-       width: initial;
-
-       @include phones {
-         width: 90%;
-         max-width: 90%;
-       }
-     }
-     .hero__desc_text {
-       margin-top: rem(25px);
-     }
+    flex: auto;
+  }
+    @include phones {
+    align-items: center;
   }
 }
 
 .hero__image {
   width: 50%;
+  @include tablets {
+    width: 58%;
+  }
+  @include phones {
+    width: 82%;
+  }
+  @include phones320 {
+    width: 70%;
+  }
 }
 
 .hero__pic {
@@ -59,7 +44,28 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
+  text-align: center;
+  @include tablets {
+    max-width: 70%;
+    margin-top: rem(20px);
+    width: initial;
+    align-items: center;
+
+  }
+  @include phones {
+    max-width: 90%;
+    align-items: center;
+    margin-top: rem(49.23px);
+  }
+}
+
+.hero__title {
+  line-height: 1;
+
+  @include tablets {
+    width: initial;
+  }
 }
 
 .hero__desc_text {
@@ -67,7 +73,11 @@
   font-size: rem(65px);
   line-height: 0.9;
   color: #fff;
-}
-
-.hero__title {
+  align-items: center;
+  @include tablets {
+    margin-top: rem(25px);
+  }
+  @include phones {
+    margin-top: rem(12.31px);
+  }
 }

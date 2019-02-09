@@ -4,10 +4,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- shrink-to-fit=no -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Бургеры</title>
     <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="shortcut icon" href="./favicon-16x16.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon-16x16.ico" type="image/x-icon">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
   </head>
 
   <body>
@@ -78,7 +80,9 @@
 
             </div>
           </div>
-          <div class="arrow-scroll"></div>
+          <div class="arrow-scroll">
+            <div class="arrow-scroll-pic"></div>
+          </div>
         </div>
       </section>
 
@@ -144,11 +148,13 @@
           <div class="crew__block">
             <div class="crew__content">
               <div class="title crew__title">Команда</div>
-              <div class="crew__accordeon">
+              <div class="crew__acco">
                 <div class="crew__item">
                   <div class="title crew__name">Дэниэл Рэдклиф</div>
                   <div class="crew__thumb">
-                    <div class="crew__avatar" style="background-image: url('./img/content/crew/crew1.png')"></div>
+                    <div class="crew__avatar">
+                      <img src='./img/content/crew/crew1.png' alt="фото" class="crew__avatar-pic">
+                    </div>
                     <div class="crew__desc">
                       <div class="crew__post">Оператор</div>
                       <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ.
@@ -159,7 +165,9 @@
                 <div class="crew__item crew__item_active">
                   <div class="title crew__name">Ричард Джеймс</div>
                   <div class="crew__thumb ">
-                    <div class="crew__avatar" style="background-image: url('./img/content/crew/crew2.png'" )></div>
+                    <div class="crew__avatar">
+                      <img src='./img/content/crew/crew2.png' alt="фото" class="crew__avatar-pic">
+                    </div>
                     <div class="crew__desc">
                       <div class="crew__post">Оператор</div>
                       <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ.
@@ -170,7 +178,9 @@
                 <div class="crew__item">
                   <div class="title crew__name">Джейк Финн</div>
                   <div class="crew__thumb">
-                    <div class="crew__avatar" style="background-image: url('./img/content/crew/crew3.png')"></div>
+                    <div class="crew__avatar">
+                      <img src='./img/content/crew/crew3.png' alt="фото" class="crew__avatar-pic">
+                    </div>
                     <div class="crew__desc">
                       <div class="crew__post">Оператор</div>
                       <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ.
@@ -181,7 +191,9 @@
                 <div class="crew__item">
                   <div class="title crew__name">Владимир Сорокин</div>
                   <div class="crew__thumb">
-                    <div class="crew__avatar" style="background-image: url('./img/content/crew/crew4.png'" )></div>
+                    <div class="crew__avatar">
+                      <img src='./img/content/crew/crew4.png' alt="фото" class="crew__avatar-pic">
+                    </div>
                     <div class="crew__desc">
                       <div class="crew__post">Оператор</div>
                       <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ.
@@ -467,7 +479,7 @@
                     <svg class="contacts__phone-pic">
                       <use xlink:href='./img/icons/sprite.svg#phone'></use>
                     </svg>
-                    <div class="contacts__tel">+7 (812) 377-13-77</div>
+                    <a href="tel:+78123771377" class="contacts__tel">+7 (812) 377-13-77</a>
                   </div>
                 </div>
               </div>
