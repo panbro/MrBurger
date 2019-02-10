@@ -2,7 +2,9 @@
 $menu_px: 7px;
 $tomato: #e45028;
 $butter: #f9b43b;
-$dark-grey: rgba(47, 50, 52, 0.8);
+$dark-grey: rgba(47, 50, 52, 0.8);//некоторый текст
+$grey: rgba(47, 50, 52, 0.93);//серый фон
+
 
 //breakpoints
 $tablets: 768px;
@@ -34,6 +36,7 @@ $phones320: 320px;
 @import "./blocks/footer.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/socials.scss";
+@import "./blocks/close.scss";
 
 
 @import "./blocks/fixed-menu.scss";

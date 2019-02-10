@@ -1,0 +1,77 @@
+.close {
+  display: none;
+  @include phones {
+    display: block;
+    position: relative;
+    align-self: flex-end;
+    width: rem(25px);
+    height: rem(25px);
+    padding: rem(37px);
+    cursor: pointer;
+    &:before,
+    &:after {
+      position: absolute;
+      left: 50%;
+      content: '';
+      height: rem(25px);
+      width: rem(4px);
+      background-color: #ffffff;
+      border-radius: 25%;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// .close__menu {
+//   @include tablets {
+//     display: block;
+//     position: absolute;
+//     top: 0.6rem;
+//     right: 1.3rem;
+//     padding: 1.06rem;
+//     cursor: pointer;
+//     &:before,
+//     &:after {
+//       position: absolute;
+//       left: 50%;
+//       content: '';
+//       height: 1.539rem;
+//       width: 0.24rem;
+//       background-color: #ffffff;
+//       border-radius: 25%;
+//     }
+//     &:before {
+//       transform: rotate(45deg);
+//     }
+//     &:after {
+//       transform: rotate(-45deg);
+//     }
+//   }
+// }
+
+// .close__process {
+//   display: block;
+//   display: block;
+//   cursor: pointer;
+//   &:before,
+//   &:after {
+//     position: absolute;
+//     left: 50%;
+//     content: '';
+//     height: 1.539rem;
+//     width: 0.24rem;
+//     background-color: $tomato;
+//     border-radius: 25%;
+//   }
+//   &:before {
+//     transform: rotate(45deg);
+//   }
+//   &:after {
+//     transform: rotate(-45deg);
+//   }
+// }

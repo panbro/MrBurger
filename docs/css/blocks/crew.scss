@@ -13,7 +13,7 @@
   right: 0;
   height: 100%;
   width: 50%;
-  background-color: rgba(31, 30, 30, 0.9);
+  background-color: $grey;
   @include tablets {
     width: 100%;
     display: flex;
