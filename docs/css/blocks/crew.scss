@@ -80,6 +80,7 @@
 .crew__item {
   margin-bottom: rem(14px);
   margin-left: rem(15px);
+  cursor: pointer;
   &:last-child {
     margin-bottom: 0;
   }
