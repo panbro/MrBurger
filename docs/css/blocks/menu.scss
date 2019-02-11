@@ -122,7 +122,7 @@
 
 @each $menuitem in (meat, vegan, diet) {
   .menu__subtitle_#{$menuitem} {
-    background: url('../../img/backgrounds/menu/menu_#{$menuitem}.png') center center / cover no-repeat;
+    background: url('./../img/backgrounds/menu/menu_#{$menuitem}.png') center center / cover no-repeat;
     &:before {
       content: "";
       background: #000;
