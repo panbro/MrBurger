@@ -1,17 +1,17 @@
-// const items = document.querySelectorAll('.crew__item');
+const items = document.querySelectorAll('.crew__item');
 
-// for (item of items) {
+for (item of items) {
 
 
-//   item.addEventListener('click', e => {
-//     const curItem = e.currentTarget;
-//     const content = curItem.querySelector('.crew__thumb');
-//     console.log(content);
+  item.addEventListener('click', e => {
+    const curItem = e.currentTarget;
+    const content = curItem.querySelector('.crew__thumb');
+    console.log(content);
 
-//     const browserBlock = content.children[1].children[1];
-//     console.log(browserBlock + ' browserBlock');
-//   });
-// }
+    const browserBlock = content.children[1].children[1];
+    console.log(browserBlock + ' browserBlock');
+  });
+}
 
 
     

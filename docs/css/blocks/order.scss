@@ -202,12 +202,12 @@
   height: 15px;
   margin-right: rem(8px);
   vertical-align: middle;
-  background: url('../../img/icons/checkbox_sprites.png') -45px -10px;
+  background: url('./../img/icons/checkbox_sprites.png') -45px -10px;
   transition: 0.2s;
 }
 
 .form__checkbox-input:checked+.form__checkbox-sprite {
-  background: url('../../img/icons/checkbox_sprites.png') -10px -10px;
+  background: url('./../img/icons/checkbox_sprites.png') -10px -10px;
 }
 
 .form__buttons-item {

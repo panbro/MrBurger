@@ -47,7 +47,7 @@
 }
 
 .reviews__content {
-
+overflow: hidden;
   @include tablets {
     text-align: center;
   }
@@ -87,6 +87,7 @@
 
 .reviews__btn {
   margin-top: rem(26px);
+  padding-bottom: rem(10px);
 
   @include tablets {
     text-align: center;
