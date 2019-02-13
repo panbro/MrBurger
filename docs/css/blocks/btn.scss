@@ -1,9 +1,19 @@
 .btn {
   background-color: $tomato;
-  border-radius: 5px;
-  padding: 10px 15px;
+  border-radius: rem(5px);
+  padding: rem(10px) rem(15px);
   text-transform: uppercase;
   color: #fff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
-}//
+
+  @include phones {
+    font-size: 13px;
+    padding: 11px 17px;
+  }
+}
+
+.hero__order_btn {
+  margin-left: rem(15px);
+}
+

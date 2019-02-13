@@ -2,28 +2,43 @@
 $menu_px: 7px;
 $tomato: #e45028;
 $butter: #f9b43b;
-$dark-grey: rgba(47, 50, 52, 0.8);
+$dark-grey: rgba(47, 50, 52, 0.8);//некоторый текст
+$grey: rgba(47, 50, 52, 0.93);//серый фон
 
-//normalize.scss
-@import "./layout/normalize.scss";
+
+//breakpoints
+$tablets: 768px;
+$goodNavMenu: 960px;
+$phones: 480px;
+$phones320: 320px;
 
 //setups
+@import "./layout/normalize.scss";
+@import "./layout/media.scss";
 @import "./layout/fonts.scss";
 @import "./layout/base.scss";
 
 //blocks
 @import "./blocks/header.scss";
 @import "./blocks/menu.scss";
+@import "./blocks/hamburger-menu-link.scss";
+//@import "./blocks/hamburger-menu.scss";
+@import "./blocks/title.scss";
 @import "./blocks/btn.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/arrow.scss";
-@import "./blocks/title.scss";
 @import "./blocks/we.scss";
 @import "./blocks/reviews.scss";
 @import "./blocks/compos.scss";
 @import "./blocks/crew.scss";
+@import "./blocks/order.scss";
 @import "./blocks/nav-menu.scss";
 @import "./blocks/menu.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/close.scss";
+
 
 @import "./blocks/fixed-menu.scss";
 
