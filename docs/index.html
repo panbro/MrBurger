@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Бургеры</title>
-  <link rel="stylesheet" href="css/main.css" type="text/css" />
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Бургеры</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="shortcut icon" href="./favicon-16x16.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon-16x16.ico" type="image/x-icon">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  </head>
 
-<body>
-  <div class="wrapper">
-    <div class="maincontent">
-      <section class="section hero">
+  <body>
+    <div class="wrapper">
+      <div class="maincontent">
+        <section class="section hero">
         <div class="container hero__container">
           <header class="header">
             <div class="logo">
@@ -28,7 +31,7 @@
                   </li>
                   <li class="nav-menu__item">
                     <a href="#" class="nav-menu__link">
-                      <div class="menu__title">Бургеры</div>
+                      <div class="nav-menu__title">Бургеры</div>
                     </a>
                   </li>
                   <li class="nav-menu__item">
@@ -58,7 +61,12 @@
                   </li>
                 </ul>
               </nav>
-              <a href="#" class="btn hero__order_btn">Заказать</a>
+              <div class="header__links">
+                <a href="#" class="btn hero__order_btn">Заказать</a>
+              </div>
+              <a class="hamburger-menu-link" href="#">
+                <div class="hamburger-menu-link__bars"></div>
+              </a>
             </div>
           </header>
 
@@ -72,7 +80,9 @@
 
             </div>
           </div>
-          <div class="arrow-scroll"></div>
+          <div class="arrow-scroll">
+            <div class="arrow-scroll-pic"></div>
+          </div>
         </div>
       </section>
 
@@ -83,27 +93,45 @@
           </div>
           <ul class="we__content">
             <li class="we__item">
-              <div class="we__pic we__pic_meat"></div>
-              <div class="we__subtitle">100% свежее мясо</div>
+              <div class="we__pic">
+                <svg class="we__pic_meat">
+                  <use xlink:href='./img/icons/sprite.svg#meat'></use>
+                </svg>
+              </div>
               <div class="we__desc">
+              <div class="we__subtitle">100% свежее мясо</div>
+              <div class="we__text">
                 <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
                   Ямб неравномерен.</p>
               </div>
+            </div>
             </li>
             <li class="we__item">
-              <div class="we__pic we__pic_hand"></div>
-              <div class="we__subtitle">Ручная сборка</div>
+              <div class="we__pic">
+                <svg class="we__pic_hand">
+                  <use xlink:href='./img/icons/sprite.svg#hand'></use>
+                </svg>
+              </div>
               <div class="we__desc">
+              <div class="we__subtitle">Ручная сборка</div>
+              <div class="we__text">
                 <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
                   Первое полустишие притягивает сюжетный реформаторский пафос.</p>
               </div>
+            </div>
             </li>
             <li class="we__item">
-              <div class="we__pic we__pic_natural"></div>
-              <div class="we__subtitle">Натуральные ингридиенты</div>
+              <div class="we__pic">
+                <svg class="we__pic_leaf">
+                  <use xlink:href='./img/icons/sprite.svg#leaf'></use>
+                </svg>
+              </div>
               <div class="we__desc">
+              <div class="we__subtitle">Натуральные ингридиенты</div>
+              <div class="we__text">
                 <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
               </div>
+            </div>
             </li>
           </ul>
         </div>
@@ -115,49 +143,57 @@
         </div>
       </section>
 
-      <!-- <section class="section crew">
+      <section class="section crew">
         <div class="crew__container">
           <div class="crew__block">
             <div class="crew__content">
               <div class="title crew__title">Команда</div>
-              <div class="crew__accordeon">
-                <div class="crew__item">
+              <div class="crew__acco">
+                <div class="crew__item t1"> <!--crew__item_active-->
                   <div class="title crew__name">Дэниэл Рэдклиф</div>
                   <div class="crew__thumb">
-                    <div class="crew__avatar" style="background-image: url('./img/content/crew/crew1.png')"></div>
+                    <div class="crew__avatar">
+                      <img src='./img/content/crew/crew1.png' alt="фото" class="crew__avatar-pic">
+                    </div>
                     <div class="crew__desc">
                       <div class="crew__post">Оператор</div>
-                      <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ.
+                      <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ. С радостью поможет подобрать идеальный бургер и оформить заказ.
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="crew__item crew__item_active">
+                <div class="crew__item t2 crew__item_active">
                   <div class="title crew__name">Ричард Джеймс</div>
                   <div class="crew__thumb ">
-                    <div class="crew__avatar" style="background-image: url('./img/content/crew/crew2.png'" )></div>
+                    <div class="crew__avatar">
+                      <img src='./img/content/crew/crew2.png' alt="фото" class="crew__avatar-pic">
+                    </div>
                     <div class="crew__desc">
                       <div class="crew__post">Оператор</div>
-                      <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ.
+                      <div class="crew__occupation">С радостью поможет.
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="crew__item">
+                <div class="crew__item t3 ">
                   <div class="title crew__name">Джейк Финн</div>
                   <div class="crew__thumb">
-                    <div class="crew__avatar" style="background-image: url('./img/content/crew/crew3.png')"></div>
+                    <div class="crew__avatar">
+                      <img src='./img/content/crew/crew3.png' alt="фото" class="crew__avatar-pic">
+                    </div>
                     <div class="crew__desc">
                       <div class="crew__post">Оператор</div>
-                      <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ.
+                      <div class="crew__occupation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam corrupti debitis impedit obcaecati ducimus facere consectetur commodi. С радостью поможет подобрать идеальный бургер и оформить заказ.
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="crew__item">
+                <div class="crew__item t4">
                   <div class="title crew__name">Владимир Сорокин</div>
                   <div class="crew__thumb">
-                    <div class="crew__avatar" style="background-image: url('./img/content/crew/crew4.png'" )></div>
+                    <div class="crew__avatar">
+                      <img src='./img/content/crew/crew4.png' alt="фото" class="crew__avatar-pic">
+                    </div>
                     <div class="crew__desc">
                       <div class="crew__post">Оператор</div>
                       <div class="crew__occupation">С радостью поможет подобрать идеальный бургер и оформить заказ.
@@ -169,50 +205,54 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="section menu">
-        <container class="container menu__container">
-          <div class="title menu__title">Меню</div>
-          <ul class="menu__thumb">
-            <li class="menu__item menu__item-meat">
+      <section class="section menu">
+        <div class="title menu__title">Меню</div>
+        <div class="menu__accordeon">
+          <ul class="menu__list">
+            <li class="menu__item js-menu__item">
               <div class="menu__subtitle menu__subtitle_meat">
-                <div class="menu__subtitle-rotate">Для мясоедов</div>
+                <h3 class="title menu__subtitle-text">Для мясоедов</h3>
               </div>
               <div class="menu__desc">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsa quis modi quo eum adipisci magni
-                  fuga saepe odio quod vel itaque aperiam, debitis voluptate quibusdam quidem ipsum, suscipit
-                  dignissimos?</p>
+                <a class="close"></a>
+                <p class="menu__text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                  </p>
               </div>
             </li>
-            <li class="menu__item menu__item-vegan">
+            <li class="menu__item">
               <div class="menu__subtitle menu__subtitle_vegan">
-                <div class="menu__subtitle-rotate">Вегетарианское</div>
+                <h3 class="title menu__subtitle-text">Вегетарианское</h3>
               </div>
               <div class="menu__desc">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsa quis modi quo eum adipisci magni
-                  fuga saepe odio quod vel itaque aperiam, debitis voluptate quibusdam quidem ipsum, suscipit
-                  dignissimos?</p>
+                <a class="close"></a>
+                <p class="menu__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro est iure amet
+                  vero temporibus quia perferendis molestiae? Dolorem tempora repellendus nihil consectetur? Ex nihil
+                  esse eum architecto vero harum praesentium.</p>
               </div>
             </li>
-            <li class="menu__item menu__item-diet">
-              <div class="menu__subtitle">
-                <div class="menu__subtitle-rotate menu__subtitle_diet">Диетическое</div>
+            <li class="menu__item">
+              <div class="menu__subtitle menu__subtitle_diet">
+                <h3 class="title menu__subtitle-text">Диетическое</h3>
               </div>
               <div class="menu__desc">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsa quis modi quo eum adipisci magni
-                  fuga saepe odio quod vel itaque aperiam, debitis voluptate quibusdam quidem ipsum, suscipit
-                  dignissimos?</p>
+                <a class="close"></a>
+                <p class="menu__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias necessitatibus
+                  minima inventore ipsam at, quidem excepturi saepe distinctio similique, eum voluptatibus eius enim
+                  molestias delectus explicabo sint dolor amet aperiam.</p>
               </div>
             </li>
+
 
           </ul>
-        </container>
-      </section> -->
+        </div>
+      </section>
 
       <section class="section reviews">
         <ul class="reviews__list">
-          <li class="reviews__item" style="background-image: url('./img/content/photo1.png')">
+          <li class="reviews__item" style="background-image: url('./img/content/photo1.jpg')">
             <div class="reviews__item-hover">
               <div class="reviews__content">
                 <div class="reviews__title">Константин Спилберг</div>
@@ -228,7 +268,7 @@
               </div>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url('./img/content/photo2.png')">
+          <li class="reviews__item" style="background-image: url('./img/content/photo2.jpg')">
             <div class="reviews__item-hover">
               <div class="reviews__content">
                 <div class="reviews__title">Константин Спилберг</div>
@@ -244,7 +284,7 @@
               </div>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url('./img/content/photo3.png')">
+          <li class="reviews__item" style="background-image: url('./img/content/photo3.jpg')">
             <div class="reviews__item-hover">
               <div class="reviews__content">
                 <div class="reviews__title">Константин Спилберг</div>
@@ -260,7 +300,7 @@
               </div>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url('./img/content/photo4.png')">
+          <li class="reviews__item" style="background-image: url('./img/content/photo4.jpg')">
             <div class="reviews__item-hover">
               <div class="reviews__content">
                 <div class="reviews__title">Константин Спилберг</div>
@@ -276,7 +316,7 @@
               </div>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url('./img/content/photo5.png')">
+          <li class="reviews__item" style="background-image: url('./img/content/photo5.jpg')">
             <div class="reviews__item-hover">
               <div class="reviews__content">
                 <div class="reviews__title">Константин Спилберг</div>
@@ -292,7 +332,7 @@
               </div>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url('./img/content/photo6.png')">
+          <li class="reviews__item" style="background-image: url('./img/content/photo6.jpg')">
             <div class="reviews__item-hover">
               <div class="reviews__content">
                 <div class="reviews__title">Константин Спилберг</div>
@@ -308,7 +348,7 @@
               </div>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url('./img/content/photo7.png')">
+          <li class="reviews__item" style="background-image: url('./img/content/photo7.jpg')">
             <div class="reviews__item-hover">
               <div class="reviews__content">
                 <div class="reviews__title">Константин Спилберг</div>
@@ -324,7 +364,7 @@
               </div>
             </div>
           </li>
-          <li class="reviews__item" style="background-image: url('./img/content/photo8.png')">
+          <li class="reviews__item" style="background-image: url('./img/content/photo8.jpg')">
             <div class="reviews__item-hover">
               <div class="reviews__content">
                 <div class="reviews__title">Константин Спилберг</div>
@@ -345,55 +385,159 @@
 
       <section class="section process section_centered"></section>
 
-      <section class="section order__section"></section>
+      <section class="section section_centered order">
+        <div class="container order__container">
+          <h1 class="title order__title">Закажите доставку</h1>
+          <form class="form" action="#">
+            <div class="form__col">
+              <div class="form__row">
+                <label class="form__block">
+                  <div class="form__text">Имя</div>
+                  <input type="text" name="name" class="form__input">
+                </label>
+                <label class="form__block">
+                  <div class="form__text">Телефон</div>
+                  <input type="tel" name="phone" class="form__input">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__block">
+                  <div class="form__text">Улица</div>
+                  <input type="text" name="name" class="form__input">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__block">
+                  <div class="form__text">Дом</div>
+                  <input type="text" name="name" class="form__input">
+                </label>
+                <label class="form__block">
+                  <div class="form__text">Корпус</div>
+                  <input type="text" name="name" class="form__input">
+                </label>
+                <label class="form__block">
+                  <div class="form__text">Квартира</div>
+                  <input type="text" name="name" class="form__input">
+                </label>
+                <label class="form__block form__block-hidden">
+                  <div class="form__text">Этаж</div>
+                  <input type="text" name="name" class="form__input">
+                </label>
+              </div>
 
-      <section class="section map">
-        <footer class="footer">
+            </div>
+            <div class="form__col form__col-center">
+              <div class="form__row">
+                <label class="form__block">
+                  <div class="form__text">Комментарий</div>
+                  <textarea type="text" name="textarea" class="form__input form__input_textarea" rows="6"></textarea>
+                </label>
+              </div>
+              <div class="form__buttons">
 
-        </footer>
+                <div class="form-controls__row">
+
+                  <label class="form-controls__btn">
+                    <input type="radio" name="answer" class="form-controls__real-radio">
+                    <div class="form-controls__fake-radio"></div>
+                    <div class="form-controls__btn-title">Потребуется сдача</div>
+                  </label>
+
+                  <label class="form-controls__btn">
+                    <input type="radio" name="answer" class="form-controls__real-radio">
+                    <div class="form-controls__fake-radio"></div>
+                    <div class="form-controls__btn-title">Оплата по карте</div>
+                  </label>
+
+                </div>
+                <div class="form-controls__row">
+                  <label class="form__checkbox">
+                    <input type="checkbox" class="form__checkbox-input" name="recall" />
+                    <span class="form__checkbox-sprite"></span>
+                    <span class="form__checkbox-text">Не перезванивать</span>
+                  </label>
+                </div>
+                <div class="form-controls__row">
+                  <div class="form__buttons-item">
+                    <button type="submit" class="btn">Заказать</button>
+                  </div>
+                  <div class="form__buttons-item">
+                    <button type="submit" class="btn btn_bg_transparent">Очистить</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
       </section>
 
-      <nav class="aside-nav">
-        <ul class="aside-nav__points">
-          <li class="aside-nav__dot">
-            <a href=""></a>
-          </li>
-          <li class="aside-nav__dot">
-            <a href=""></a>
-          </li>
-          <li class="aside-nav__dot">
-            <a href=""></a>
-          </li>
-          <li class="aside-nav__dot">
-            <a href=""></a>
-          </li>
-          <li class="aside-nav__dot">
-            <a href=""></a>
-          </li>
-          <li class="aside-nav__dot">
-            <a href=""></a>
-          </li>
-          <li class="aside-nav__dot">
-            <a href=""></a>
-          </li>
-          <li class="aside-nav__dot">
-            <a href=""></a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="fixed-menu">
-        <ul class="fixed-menu__list">
-          <li class="fixed-menu__item fixed-menu__item_active"></li>
-          <li class="fixed-menu__item"></li>
-          <li class="fixed-menu__item"></li>
-          <li class="fixed-menu__item"></li>
-          <li class="fixed-menu__item"></li>
-          <li class="fixed-menu__item"></li>
-          <li class="fixed-menu__item"></li>
-          <li class="fixed-menu__item"></li>
-          <li class="fixed-menu__item"></li>
-        </ul>
-      </nav>
+        <section class="section map">
+          <footer class="footer">
+            <div class="container footer__container">
+              <div class="footer__col">
+                <div class="contacts">
+                  <div class="contacts__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                  <div class="contacts__phone">
+                    <svg class="contacts__phone-pic">
+                      <use xlink:href='./img/icons/sprite.svg#phone'></use>
+                    </svg>
+                    <a href="tel:+78123771377" class="contacts__tel">+7 (812) 377-13-77</a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__col">
+                <ul class="socials__list">
+                  <li class="socials__item">
+                    <a href="#" class="socials__names socials__vk">
+                      мы во вконтакте
+                      <svg class="socials__pics">
+                        <use xlink:href='./img/icons/sprite.svg#vk'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="#" class="socials__names socials__fb">
+                      мы в фейсбуке
+                      <svg class="socials__pics">
+                        <use xlink:href='./img/icons/sprite.svg#fb'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="#" class="socials__names socials__inst">
+                      мы в инстаграм
+                      <svg class="socials__pics">
+                        <use xlink:href='./img/icons/sprite.svg#inst'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="#" class="socials__names socials__tw">
+                      мы в твиттере
+                      <svg class="socials__pics">
+                        <use xlink:href='./img/icons/sprite.svg#tw'></use>
+                      </svg>
+                    </a>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        </section>
+        <nav class="fixed-menu">
+          <ul class="fixed-menu__list">
+            <li class="fixed-menu__item fixed-menu__item_active"></li>
+            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item"></li>
+            <li class="fixed-menu__item"></li>
+          </ul>
+        </nav>
+      </div>
+      <script src='./js/team__acco.js'> </script>
     </div>
-  </div>
-</body>
+  </body>
