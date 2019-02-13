@@ -2,16 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: rem(10px);
+  margin-top: 10px;
 }
 
 .header__btns {
   display: flex;
   align-items: center;
-}
-
-.header__links {
-  display: flex;
-  flex-direction: column;
-
 }

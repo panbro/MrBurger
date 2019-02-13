@@ -1,125 +1,49 @@
-.we__content {
-  display: flex;
-  justify-content: center;
-
-  @include phones {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4px;
-    justify-content: space-between;
-  }
+.we__container {
 }
 
 .we__title {
-  color: #000;
-  text-align: center;
-  // margin-top: rem(-26px);
-  //margin-left: rem(-11px);
+}
 
-  @include phones {
-    font-size: 50px;
-    line-height: 1;
-    margin-bottom: rem(2.46px);
-  }
-
-  @include phones320 {
-    font-size: 50px;
-    line-height: 1;
-    margin-bottom: rem(10px);
-  }
+.we__content {
+  display: flex;
+  justify-content: center;
+    &:last-child {
+      margin-right: 0;
+    }
 }
 
 .we__item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 30%;
+  max-width: 33.3%;
   align-items: center;
   text-align: center;
-  margin-right: 2%;
-  &:last-child {
-    margin-right: 0;
-  }
  
-  @include phones {
-    width: initial;
-    flex-direction: row;
-    max-width: 95%;
-    margin-bottom: 20px;
-    margin-right: 0;
-    &:last-child {
-      margin-bottom:0;
-    }
-  }
-  @include phones320 {
-    margin-bottom: 0;
-    max-width: 100%;
-  }
 }
 
 .we__pic {
-  height: rem(90px);
-  margin-top: rem(28px);
+  width: 97px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 28px;
+  height: 90px;
   position: relative;
-  
-  &_meat {
-    fill: $tomato;
-  }
-  &_hand {
-    fill: $butter;
-  }
-  &_leaf {
-    fill: #8ac03e;
-  }
-
-  @include phones {
-    margin-top: 0;
-    height: rem(105px);
-  }
- }
-
-svg[class^=we__pic_] {
-  height: 100%;
-
-  @include phones {
-    width: rem(111px);
-  }
-  @include phones320 {
-    width: rem(85px);
-  }
-}
-
-.we__desc {
-  @include phones {
-    text-align: left;
-    margin-left: rem(33px);
-  }
-  @include phones {
-    margin-left: rem(17px);
-  }
 }
 
 .we__subtitle {
   font-family: Lifehack, Helvetica, sans-serif;
   line-height: 1.4;
-  font-size: rem(28.31px);
+  font-size: 24px;
   text-align: inherit;
-  margin-top: rem(31px);
-  
-  @include phones320 {
-    margin-top: rem(15px);
-    font-size: rem(26px);
-  }
+  margin-top: 31px;
 }
 
-.we__text {
+.we__desc {
   line-height: 1;
-  color: $grey;
+  color: $dark-grey;
   text-align: inherit;
   line-height: 1.71;
-  margin-top: rem(18px);
-  @include phones320 {
-    margin-top: rem(3px);
-    font-size: rem(16px);
-  }
+  margin-top: 18px;
 }

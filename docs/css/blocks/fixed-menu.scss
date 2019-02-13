@@ -1,22 +1,18 @@
 .fixed-menu {
   position: fixed;
-  top: rem(90px);
-  right: rem(44px);
-
-  @include tablets {
-    display: none;
-  }
+  top: 90px;
+  right: 44px;
 }
 
 .fixed-menu__item,
 .fixed-menu__item_active {
   position: relative;
   display: block;
-  width: rem(16px);
-  height: rem(16px);
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  margin-bottom: rem(5px);
-  border: rem(1px) solid transparent;
+  margin-bottom: 5px;
+  border: 1px solid transparent;
   &:hover {
     border-color: #fff;
     cursor: pointer;
@@ -27,13 +23,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: rem(6px);
-    width: rem(6px);
+    height: 6px;
+    width: 6px;
     border-radius: 50%;
     background: #fff;
   }
 }
 
 .fixed-menu__item_active {
-  border: rem(1px) solid #fff;
+  border: 1px solid #fff;
 }
+//..
