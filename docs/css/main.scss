@@ -7,8 +7,8 @@ $grey: rgba(47, 50, 52, 0.93);//серый фон
 
 
 //breakpoints
-$tablets: 768px;
 $goodNavMenu: 960px;
+$tablets: 768px;
 $phones: 480px;
 $phones320: 320px;
 
@@ -20,10 +20,9 @@ $phones320: 320px;
 
 //blocks
 @import "./blocks/header.scss";
-@import "./blocks/menu.scss";
 @import "./blocks/hamburger-menu-link.scss";
-//@import "./blocks/hamburger-menu.scss";
 @import "./blocks/title.scss";
+@import "./blocks/logo.scss";
 @import "./blocks/btn.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/arrow.scss";
@@ -38,7 +37,5 @@ $phones320: 320px;
 @import "./blocks/contacts.scss";
 @import "./blocks/socials.scss";
 @import "./blocks/close.scss";
-
-
 @import "./blocks/fixed-menu.scss";
 

@@ -1,0 +1,28 @@
+.logo {
+  cursor: pointer;
+  @include tablets {
+    margin-top: rem(2.3px);
+  }
+  @include phones {
+    margin-top: rem(2.46px);
+  }
+}
+
+.logo__icon {
+  width: rem(105px);
+  height: rem(79px);
+}
+
+.logo__full-menu {
+  display: none;
+  @include tablets {
+    display: block;
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+}
+

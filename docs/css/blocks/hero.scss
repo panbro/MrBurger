@@ -2,16 +2,15 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
+  position: relative;
 }
-
-
 
 .hero__content {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0.91;
+  flex: 0.71;
   @include tablets {
     flex-direction: column;
     align-items: center;
@@ -44,13 +43,13 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  text-align: center;
+  text-align: left;
   @include tablets {
     max-width: 70%;
     margin-top: rem(20px);
     width: initial;
     align-items: center;
+    text-align: center;
 
   }
   @include phones {

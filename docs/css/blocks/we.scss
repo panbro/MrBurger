@@ -13,8 +13,6 @@
 .we__title {
   color: #000;
   text-align: center;
-  // margin-top: rem(-26px);
-  //margin-left: rem(-11px);
 
   @include phones {
     font-size: 50px;
@@ -102,7 +100,7 @@ svg[class^=we__pic_] {
 .we__subtitle {
   font-family: Lifehack, Helvetica, sans-serif;
   line-height: 1.4;
-  font-size: rem(28.31px);
+  font-size: rem(24px);
   text-align: inherit;
   margin-top: rem(31px);
   

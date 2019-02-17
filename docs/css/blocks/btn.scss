@@ -6,6 +6,11 @@
   color: #fff;
   font-size: rem(13px);
   font-weight: 500;
+  
+  @include tablets {
+    font-size: rem(14.86px);
+    padding: rem(12.57px) rem(19.43px);
+  }
 
   @include phones {
     font-size: 13px;
