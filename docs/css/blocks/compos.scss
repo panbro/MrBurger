@@ -16,12 +16,20 @@
   justify-content: center;
 }
 
+.compos__slider {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .compos__item {
   display: flex;
   width: 100%;
   @include tablets {
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    justify-content: center;
   }
 }
 
@@ -32,14 +40,15 @@
   flex-direction: column;
   @include tablets {
     width: 71%;
+    margin-top: 3%;
   }
   @include phones {
     width: 108%;
-    margin-top: rem(111px);
+    // margin-top: rem(111px);
   }
-  @include phones320 {
-    margin-top: 0;
-  }
+  // @include phones320 {
+  //   margin-top: 0;
+  // }
 }
 
 .compos__consist {
@@ -313,6 +322,7 @@
   color: #fff;
   @include tablets {
     width: 84%;
+    margin-bottom: 3%;
   }
   @include phones {
     width: 100%;
