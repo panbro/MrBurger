@@ -2,21 +2,22 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: flex-start;
-  position: relative;
+  justify-content: space-between;
 }
+
+
 
 .hero__content {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0.71;
+  flex: 0.91;
   @include tablets {
     flex-direction: column;
     align-items: center;
-    flex: 0.85;
+    flex: auto;
   }
-  @include phones {
+    @include phones {
     align-items: center;
   }
 }
@@ -24,14 +25,13 @@
 .hero__image {
   width: 50%;
   @include tablets {
-    width: 62%;
+    width: 58%;
   }
   @include phones {
     width: 82%;
   }
   @include phones320 {
-    // width: 70%;
-    margin-top: 0;
+    width: 70%;
   }
 }
 
@@ -44,13 +44,13 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  // justify-content: center;
+  text-align: center;
   @include tablets {
     max-width: 70%;
     margin-top: rem(20px);
     width: initial;
     align-items: center;
-    text-align: center;
 
   }
   @include phones {
@@ -62,13 +62,9 @@
 
 .hero__title {
   line-height: 1;
-  margin-bottom: rem(33px);
-  margin-top: rem(70px);
 
   @include tablets {
     width: initial;
-    margin-bottom: 0;
-    margin-top: 0;
   }
 }
 
@@ -78,19 +74,10 @@
   line-height: 0.9;
   color: #fff;
   align-items: center;
-  @include goodNavMenu {
-    font-size: rem(60px);
-  }
   @include tablets {
-    margin-top: rem(46px);
-    font-size: rem(74.3px);
+    margin-top: rem(25px);
   }
   @include phones {
     margin-top: rem(12.31px);
-    font-size: rem(61.7px);
-  }
-  @include phones320 {
-    margin-top: rem(12.31px);
-    font-size: rem(55px);
   }
 }

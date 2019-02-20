@@ -8,12 +8,6 @@
   }
 }
 
-@mixin goodNavMenu() {
-  @media screen and (max-width: $goodNavMenu) {
-    @content;
-  }
-}
-
 @mixin phones() {
   @media screen and (max-width: $phones) {
     @content;

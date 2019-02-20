@@ -109,10 +109,8 @@ a {
   } 
 }
 
-@each $bgpic in (hero, we, crew, menu, process, order, map) {
+@each $bgpic in (hero, we, compos, crew, menu, process, order, map) {
    .#{$bgpic} {
     background: url('../img/backgrounds/section_#{$bgpic}.png') center center / cover no-repeat; 
   }
 }
-
-

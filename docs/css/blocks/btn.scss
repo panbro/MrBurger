@@ -6,23 +6,13 @@
   color: #fff;
   font-size: rem(13px);
   font-weight: 500;
-  
-  @include tablets {
-    font-size: rem(14.86px);
-    padding: rem(12.57px) rem(19.43px);
-  }
-  
+
   @include phones {
-    font-size: rem(16px);
-    padding: rem(13.54px) rem(20.92px);
-  }
-  @include phones320 {
-    font-size: rem(13px);
-    padding: rem(10px) rem(15px);
+    font-size: 13px;
+    padding: 11px 17px;
   }
 }
 
 .hero__order_btn {
   margin-left: rem(15px);
 }
-
