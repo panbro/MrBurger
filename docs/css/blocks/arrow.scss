@@ -1,14 +1,30 @@
-.arrow-scroll {
-  height: 15px;
-  width: rem(30px);
-  align-self: center;
-  margin-bottom: rem(41px);
-  @include phones320 {
-    margin-bottom: rem(10px);
-  }
+.arrow {
+  fill: #fff;
+  width: 28px;
+  height: 13px;
+  position: absolute;
 }
 
-.arrow-scroll-pic {
-  height: 100%;
-  background: url('../img/icons/decor/arrow_scroll.png') center center no-repeat;
+.hero__arrow {
+  left: 47.5%;
+  bottom: 6%;
+}
+
+.compos__arrows {
+  position: relative;
+  display: flex;
+  min-width: rem(28px);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.compos__left-arrow {
+  transform: rotate(90deg);
+  margin-right: 0;
+  width: 100%;
+}
+
+.compos__right-arrow {
+  transform: rotate(-90deg);
+  margin-left: 0;
 }

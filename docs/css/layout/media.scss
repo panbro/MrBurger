@@ -8,6 +8,17 @@
   }
 }
 
+@mixin breakpoint970() {
+  @media screen and (max-width: $breakpoint970) {
+    @content;
+  }
+}
+@mixin breakpoint800() {
+  @media screen and (max-width: $breakpoint800) {
+    @content;
+  }
+}
+
 @mixin phones() {
   @media screen and (max-width: $phones) {
     @content;

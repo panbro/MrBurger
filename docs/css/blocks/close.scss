@@ -1,6 +1,7 @@
 .close {
   display: none;
-  @include phones {
+  @include tablets {
+    margin-top: rem(14.77px);
     display: block;
     position: relative;
     align-self: flex-end;
@@ -27,51 +28,57 @@
   }
 }
 
-// .close__menu {
-//   @include tablets {
-//     display: block;
-//     position: absolute;
-//     top: 0.6rem;
-//     right: 1.3rem;
-//     padding: 1.06rem;
-//     cursor: pointer;
-//     &:before,
-//     &:after {
-//       position: absolute;
-//       left: 50%;
-//       content: '';
-//       height: 1.539rem;
-//       width: 0.24rem;
-//       background-color: #ffffff;
-//       border-radius: 25%;
-//     }
-//     &:before {
-//       transform: rotate(45deg);
-//     }
-//     &:after {
-//       transform: rotate(-45deg);
-//     }
-//   }
-// }
+.close__menu {
+  @include tablets {
+    position: absolute;
+    top: 0.6rem;
+    right: 1.3rem;
+    padding: 1.06rem;
+    display: block;
+    cursor: pointer;
+    &:before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      content: '';
+      height: 1.539rem;
+      width: 0.24rem;
+      background-color: #ffffff;
+      border-radius: 25%;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
 
-// .close__process {
-//   display: block;
-//   display: block;
-//   cursor: pointer;
-//   &:before,
-//   &:after {
-//     position: absolute;
-//     left: 50%;
-//     content: '';
-//     height: 1.539rem;
-//     width: 0.24rem;
-//     background-color: $tomato;
-//     border-radius: 25%;
-//   }
-//   &:before {
-//     transform: rotate(45deg);
-//   }
-//   &:after {
-//     transform: rotate(-45deg);
-//   }
-// }
+.compos__close {
+  display: none;
+  z-index: 20;
+  cursor: pointer;
+  @include tablets {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-top: rem(10.3px);
+  }
+  &:before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    content: '';
+    height: rem(24.6px);
+    width: 0.24rem;
+    background-color: $tomato;
+    border-radius: 25%;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
