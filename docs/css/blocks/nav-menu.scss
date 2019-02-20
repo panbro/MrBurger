@@ -2,9 +2,26 @@
   flex: 1;
   text-align: right;
   margin-right: rem(20px);
-
+  
+  @include breakpoint970 {
+    margin-right: rem(5px);
+  }
+  @include breakpoint800 {
+    margin-right: rem(3px);
+  }
   @include tablets {
+    margin-right: 0;
     display: none;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #2f3234;
+    z-index: 50;
+    height: 100%;
+    transition: left .2s;
   }
 }
 
@@ -23,12 +40,36 @@
   font-weight: 500;
   display: flex;
   align-items: center;
+  @include breakpoint970 {
+  font-size: rem(12.5px);
+  }
+  @include breakpoint800 {
+  font-size: rem(12px);
+  }
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 }
 
 .nav-menu__item {
   display: flex;
   align-items: center;
   margin-left: rem(17px);
+  white-space: nowrap;
+  @include breakpoint970 {
+    margin-left: rem(7px);
+  }
+  @include breakpoint800 {
+    margin-left: rem(6px);
+  }
+  @include tablets {
+    flex-direction: column;
+    margin-left: 0;
+    max-width: 60%;
+  }
   
   &:after {
     content: "";
@@ -38,11 +79,32 @@
     display: inline-block;
     background: #fff;
     margin-left: rem(17px);
+
+    @include breakpoint970 {
+      margin-left: rem(7px);
+      width: rem(3px);
+      height: rem(3px);
+    }
+    @include breakpoint800 {
+      margin-left: rem(6px);
+    }
+    @include tablets {
+      margin: 20px 0;
+      width: rem(7.4px);
+      height: rem(7.4px);
+
+    }
   }
   &:last-child {
     &:after {
       display: none;
     }
+  }
+}
+
+.nav-menu__link {
+  @include tablets {
+  font-size: rem(30px);
   }
 }
 
