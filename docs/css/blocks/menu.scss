@@ -30,15 +30,14 @@
 .menu__item {
   display: flex;
   height: 100%;
-
-
+  justify-content: flex-end;
 }
 
 .menu__subtitle {
   cursor: pointer;
   display: flex;
   height: 100%;
-  min-width: 80px;
+  min-width: 70px;
   position: relative;
   
   @include phones320 {
@@ -61,7 +60,7 @@
   }
 }
 
-.menu__desc {
+.menu__full-desc {
   width: 0;
   overflow: hidden;
   background-color: $grey;
@@ -73,7 +72,8 @@
   }
 }
 
-.js-menu__item {
+.menu__item_active {
+  
   @include phones{
     position: absolute;
     left: 0;
@@ -81,12 +81,26 @@
   }  
 }
 
-.js-menu__item .menu__subtitle-text {
-  color: $butter;
+.menu__item_active .menu__full-desc {
+  transition: .1s;
 }
 
-.js-menu__item .menu__desc {
-  width: rem(550px);
+.menu__desc {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__item_active .menu__subtitle-text {
+  color: $butter;
+}
+.menu__item_active .menu__text {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.menu__item_active {
+  width: 48%;
 
   @include tablets {
     width: 100%;
@@ -98,11 +112,11 @@
 }
 
 .menu__text {
-  padding: rem(62px) rem(35px);
+  padding: 15% 7%;
   line-height: 2;
   color: #fff;
   font-size: rem(14px);
-
+  opacity: 0;
   @include tablets {
     font-size: rem(16px);
   }

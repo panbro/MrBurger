@@ -1,7 +1,7 @@
 const hambMenu = document.querySelector('.hamburger-menu-link');
 const navMenu = document.querySelector('.nav-menu');
 const logoFullMenu = document.querySelector('.logo__full-menu');
-const closeMenu = document.querySelector('.close__menu');
+const closeMenu = document.querySelector('.close__nav-menu');
 
 
 const hambClick = hambMenu.addEventListener('click', e=> {
