@@ -37,11 +37,11 @@
   cursor: pointer;
   display: flex;
   height: 100%;
-  min-width: 70px;
+  width: 70px;
   position: relative;
   
   @include phones320 {
-    min-width: rem(70px); 
+    width: rem(70px); 
   }
 }
 
@@ -82,7 +82,7 @@
 }
 
 .menu__item_active .menu__full-desc {
-  transition: .1s;
+  // transition: width 2s;
 }
 
 .menu__desc {
@@ -96,12 +96,12 @@
 }
 .menu__item_active .menu__text {
   opacity: 1;
-  transition: 0.5s;
+  // transition: width .3s;
 }
 
 .menu__item_active {
   width: 48%;
-
+  // transition:  .1s;
   @include tablets {
     width: 100%;
   }

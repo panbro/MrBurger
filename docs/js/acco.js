@@ -61,9 +61,7 @@ function closeItem(item) {
 function openItem(item) {
   const fullDesc = item.querySelector('.menu__full-desc');
   const descr = fullDesc.firstElementChild;
-  //const itemWidth = descr.getBoundingClientRect().width;
 
   const openMenu = item.classList.add('menu__item_active');
-  //fullDesc.style.width = `${itemWidth}px`;
   fullDesc.style.width = '100%';
 }
