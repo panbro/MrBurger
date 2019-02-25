@@ -77,16 +77,18 @@ function createModal(content) {
 myForm.onsubmit = function(e){
   e.preventDefault();
 
-  const formData = new FormData(myForm);
+  let formData = new FormData(myForm);
   formData.append("to", "kapitandivan@mail.ru");
 
   const xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
   xhr.open("POST", "https://webdev-api.loftschool.com/sendmail/");
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
   xhr.send(formData);
   
   xhr.addEventListener('load', e=>{
   let resp = xhr.response;
+
 
     if(resp!=null){
       deliveryModal.classList.add('active');
@@ -96,7 +98,7 @@ myForm.onsubmit = function(e){
       setTimeout(function(){
         deliveryModal.classList.remove('active');
         body.classList.remove('body-fixed');
-      }, 3000);
+      }, 5000000);
     } else {
       deliveryModal.classList.add('active');
       deliveryModal.querySelector('.delivery-modal__text').innerHTML = "Ошибка отправки";
@@ -105,7 +107,7 @@ myForm.onsubmit = function(e){
       setTimeout(function(){
         deliveryModal.classList.remove('active');
         body.classList.remove('body-fixed');
-      }, 3000);
+      }, 5000000);
     }
 
     deliveryModal.addEventListener('click', e=>{
