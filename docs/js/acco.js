@@ -1,5 +1,6 @@
 const allItemsCrew = document.querySelectorAll('.crew__item');
-const allMenuItems = document.querySelectorAll('.menu__item');
+const allMenuSubtitles = document.querySelectorAll('.menu__subtitle');
+const menuClose = document.querySelectorAll('.menu__close');
 
 //для crew
 
@@ -34,34 +35,41 @@ function openCrewItem(item) {
   fullThumb.style.height = `${itemHeight}px`;
 }
 
-
 //для menu
-for (item of allMenuItems) {
-  item.addEventListener('click', controlMenuItems);
-}
 
-function controlMenuItems(e) {
-  e.preventDefault();
-  const curMenuItem = e.currentTarget;
-  if (curMenuItem.classList.contains('menu__item_active')) {
-    closeItem(item);
-  } else if (curMenuItem) {
-    closeItem(item);
-    openItem(curMenuItem);
+for (trigger of allMenuSubtitles) {
+  trigger.addEventListener('click', controlMenuItems);
+
+  function controlMenuItems(e) {
+
+    e.preventDefault();
+    const currentTrigger = e.currentTarget;
+    if (currentTrigger.closest('.menu__item_active')) {
+      closeItem(currentTrigger);
+    }
+    else if (currentTrigger) {
+      closeItem(currentTrigger);
+      openItem(currentTrigger);
+    }
   }
 }
 
-function closeItem(item) {
-  for (item of allMenuItems) {
-    item.classList.remove('menu__item_active');
-    item.querySelector('.menu__full-desc').style.width = 0;
+function closeItem(trigger) {
+ for (closeButton of menuClose) {
+  const closeMenuByCloseItem = closeButton.addEventListener('click', e => {
+    const closeTarget = e.currentTarget;
+    const activeClose = closeTarget.closest('.menu__item_active');
+    activeClose.classList.remove('menu__item_active');
+    console.log(activeClose)
+  }) 
+}
+  for (trigger of allMenuSubtitles) {
+    const activeItem = trigger.closest('.menu__item');
+    activeItem.classList.remove('menu__item_active');
   }
 }
 
-function openItem(item) {
-  const fullDesc = item.querySelector('.menu__full-desc');
-  const descr = fullDesc.firstElementChild;
-
-  const openMenu = item.classList.add('menu__item_active');
-  fullDesc.style.width = '100%';
+function openItem(trigger) {
+  const activeItem = trigger.closest('.menu__item');
+  activeItem.classList.add('menu__item_active');
 }

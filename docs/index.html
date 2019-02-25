@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="./favicon-16x16.ico" type="image/x-icon">
   <link rel="icon" href="./favicon-16x16.ico" type="image/x-icon">
   <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  
+
 </head>
 
 <body>
@@ -547,7 +547,7 @@
         <div class="title menu__title">Меню</div>
         <div class="menu__accordeon">
           <ul class="menu__list">
-            <li class="menu__item">
+            <li class="menu__item ">
               <div class="menu__subtitle menu__subtitle_meat">
                 <h3 class="title menu__subtitle-text">Для мясоедов</h3>
               </div>
@@ -743,7 +743,7 @@
       <section id="order" class="section section_centered order">
         <div class="container order__container">
           <h1 class="title order__title">Закажите доставку</h1>
-          <form class="form" action="#">
+          <form class="form" action="#" id='order'>
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
@@ -814,7 +814,7 @@
                 </div>
                 <div class="form-controls__row">
                   <div class="form__buttons-item">
-                    <button type="submit" class="btn">Заказать</button>
+                    <button type="submit" class="btn" id='send-btn'>Заказать</button>
                   </div>
                   <div class="form__buttons-item">
                     <button type="reset" class="btn btn_bg_transparent">Очистить</button>
@@ -893,11 +893,28 @@
         </ul>
       </nav>
     </div>
+    <script type="template" id="modal-template">
+      <div class="overlay">
+        <div class="popup__container">
+          <div class="popup__title"></div>
+          <div class="popup__content"></div>
+          <div class="popup__close"></div>
+          <div class="btn btn_popup_close"></div>
+        </div>
+      </div>
+    </script>
+    <div class="delivery-modal">
+      <div class="delivery-modal__content">
+        <p class="delivery-modal__text"></p>
+        <button class="btn btn_delivery btn_delivery-modal" id="send-btn">Закрыть</button>
+      </div>
+    </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src='./js/owl.carousel/owl.carousel.js'> </script>
     <script src='./js/nav-menu.js'> </script>
     <script src='./js/acco.js'> </script>
     <script src='./js/slider.js'> </script>
+    <script src='./js/teamModal.js'> </script>
   </div>
 </body>

@@ -1,0 +1,33 @@
+.delivery-modal {
+  background-color: rgba(#2f3234, 0.9);
+  display: none;
+
+  &.active {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.delivery-modal__content {
+border-radius: rem(5px);
+background: #fff;
+color: $grey;
+padding: 20px 20px;
+text-align: center;
+position: relative;
+}
+
+.delivery-modal__text {
+font-family: 'Ubuntu';
+font-size: rem(14px);
+font-weight: 300;
+line-height: rem(24px);
+margin-bottom: 10px;
+}
