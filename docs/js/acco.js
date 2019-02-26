@@ -1,37 +1,41 @@
 const allItemsCrew = document.querySelectorAll('.crew__item');
 const allMenuSubtitles = document.querySelectorAll('.menu__subtitle');
 const menuClose = document.querySelectorAll('.menu__close');
+const crewNames = document.querySelectorAll('.crew__name');
 
 //для crew
 
-for (item of allItemsCrew) {
-  item.addEventListener('click', controlCrewItems);
+for (crewNameItem of crewNames) {
+  crewNameItem.addEventListener('click', controlCrewItems);
 }
+for (allOfCrewItems of allItemsCrew) {
+}
+
 
 function controlCrewItems(e) {
   e.preventDefault();
-  const curCrewItem = e.currentTarget;
-  if (curCrewItem.classList.contains('crew__item_active')) {
-    closeCrewItem(item);
-  } else if (curCrewItem) {
-    closeCrewItem(item);
-    openCrewItem(curCrewItem);
+  const curCrewNameItem = e.currentTarget;
+  let currCrewItem = curCrewNameItem.closest('.crew__item');
+  if (currCrewItem.classList.contains('crew__item_active')) {
+    closeCrewItem(currCrewItem);
+  } else if (currCrewItem) {
+    closeCrewItem(currCrewItem);
+    openCrewItem(currCrewItem);
   }
 }
+function closeCrewItem(currCrewItem) {
+  Array.from(allItemsCrew).forEach(elem => {
+    elem.querySelector('.crew__full-thumb').style.height = 0;
+    elem.classList.remove('crew__item_active');
+  });
 
-function closeCrewItem(item) {
-  for (item of allItemsCrew) {
-    item.classList.remove('crew__item_active');
-    item.querySelector('.crew__full-thumb').style.height = 0;
-  }
 }
 
-function openCrewItem(item) {
-  const fullThumb = item.querySelector('.crew__full-thumb');
+function openCrewItem(currCrewItem) {
+  const fullThumb = currCrewItem.querySelector('.crew__full-thumb');
   const thumb = fullThumb.firstElementChild;
   const itemHeight = thumb.getBoundingClientRect().height;
-
-  item.classList.add('crew__item_active');
+  currCrewItem.classList.add('crew__item_active');
   fullThumb.style.height = `${itemHeight}px`;
 }
 
@@ -41,7 +45,6 @@ for (trigger of allMenuSubtitles) {
   trigger.addEventListener('click', controlMenuItems);
 
   function controlMenuItems(e) {
-
     e.preventDefault();
     const currentTrigger = e.currentTarget;
     if (currentTrigger.closest('.menu__item_active')) {
@@ -55,14 +58,13 @@ for (trigger of allMenuSubtitles) {
 }
 
 function closeItem(trigger) {
- for (closeButton of menuClose) {
-  const closeMenuByCloseItem = closeButton.addEventListener('click', e => {
-    const closeTarget = e.currentTarget;
-    const activeClose = closeTarget.closest('.menu__item_active');
-    activeClose.classList.remove('menu__item_active');
-    console.log(activeClose)
-  }) 
-}
+  for (closeButton of menuClose) {
+    const closeMenuByCloseItem = closeButton.addEventListener('click', e => {
+      const closeTarget = e.currentTarget;
+      const activeClose = closeTarget.closest('.menu__item_active');
+      activeClose.classList.remove('menu__item_active');
+    })
+  }
   for (trigger of allMenuSubtitles) {
     const activeItem = trigger.closest('.menu__item');
     activeItem.classList.remove('menu__item_active');

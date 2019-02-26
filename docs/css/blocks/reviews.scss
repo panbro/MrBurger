@@ -81,7 +81,8 @@ overflow: hidden;
   }
 
   @include phones {
-    height: 0;
+    // height: 0;
+    display: none;
   }
 }
 
@@ -99,4 +100,8 @@ overflow: hidden;
 
 .btn_bg_black {
   background-color: #2f3234;
+}
+
+.inner__reviews-text {
+  margin-top: rem(25px);
 }
