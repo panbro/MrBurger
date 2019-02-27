@@ -8,8 +8,7 @@
   }
 }
 
-.fixed-menu__item,
-.fixed-menu__item_active {
+.fixed-menu__item {
   position: relative;
   display: block;
   width: rem(16px);
@@ -34,6 +33,7 @@
   }
 }
 
-.fixed-menu__item_active {
+.fixed-menu__item.active {
   border: rem(1px) solid #fff;
+  transition: 1s;
 }
