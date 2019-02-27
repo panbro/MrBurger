@@ -82,7 +82,7 @@
 }
 
 .menu__item_active .menu__full-desc {
-  // transition: width 2s;
+  transition: .2s;
   width: 100%;
 }
 
@@ -94,15 +94,14 @@
 
 .menu__item_active .menu__subtitle-text {
   color: $butter;
+  
 }
 .menu__item_active .menu__text {
   opacity: 1;
-  // transition: width .3s;
 }
 
 .menu__item_active {
   width: 48%;
-  // transition:  .1s;
   @include tablets {
     width: 100%;
   }
