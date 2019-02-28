@@ -1,10 +1,31 @@
 .process__title {
   color: #000;
+  text-align: center;
+
+  @include tablets {
+    // font-size: rem(50px);
+    line-height: 1;
+    // margin-bottom: rem(2.46px);
+  }
+  @include phones {
+    font-size: rem(50px);
+    // line-height: 1;
+    // margin-bottom: rem(2.46px);
+  }
+
+  @include phones320 {
+    font-size: rem(50px);
+    // line-height: 1;
+    // margin-bottom: rem(10px);
+  }
 }
 
 .player {
   position: relative;
-  display: inline-block;
+  // display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &.hidden {
     // opacity: 0;
@@ -13,6 +34,9 @@
 }
 
 .player__splash {
+  //////////
+  display: none;
+  /////////////
   content: "";
   position: absolute;
   top: 0;
@@ -29,27 +53,39 @@
   }
 }
 
+#yt-player {
+  @include tablets {
+    width: 100%;
+  }
+}
+
 .player__controls {
-  position: absolute;
-  bottom: 0;
+  // position: absolute;
+  position: relative;
+  // bottom: 0;
+  bottom: 10%;
   left: 0;
   right: 0;
-  height: 35px;
+  height: 42px;
   background: #3e3e3e;
+  display: flex;
+  flex-direction: row;
 }
 
 .player__start {
   width: 0;
   height: 0;
-  border: 11px solid transparent;
-  border-left-color: #626262;
+  border-top: 11px solid transparent;
+	border-left: 16px solid #626262;
+	border-bottom: 11px solid transparent;
   padding: 0;
   border-right-width: 0;
   background: transparent;
-  position: absolute;
-  top: 5px;
-  left: 20px;
+  // position: absolute;
+  top: 10px;
+  left: 15px;
   outline: none;
+  margin: auto 4% auto 3%;
   &.paused {
     width: 14px;
     height: 22px;
@@ -73,22 +109,36 @@
   }
 }
 
+.player__playback-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
 .player__playback {
-  position: absolute;
+  // position: absolute;
   height: 4px;
-  width: 446px;
+  // width: 446px;
+  // width: 78%;
   background: #626262;
-  top: 15px;
-  left: 50px;
+  top: 18px;
+  // left: 50px;
   cursor: pointer;
+  padding: 3.5px 0;
+  border-radius: 7px;
+  position: relative;
+  margin: 0 auto;
+
+  // @include tablets {
+  //   width: 66%;
+  // }
 }
 
 .player__playback-button {
   background: #626262;
   border-radius: 50px;
   border: none;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   padding: 0;
   position: absolute;
   top: -4px;
@@ -97,13 +147,18 @@
 }
 
 .player__duration {
-  position: absolute;
+  // position: absolute;
   top: 7px;
   right: 20px;
   color: #626262;
   font-weight: bold;
+  white-space: nowrap;
+  margin: auto 1% auto 2%;
 }
 
 .container__process {
   width: initial;
+  @include tablets {
+    width: 98%;
+  }
 }
